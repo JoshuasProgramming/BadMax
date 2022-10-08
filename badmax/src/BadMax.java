@@ -59,18 +59,36 @@ public class BadMax
     //ordered array method 
     public ArrayList<Integer> orderedArray(int nums){
 
-    //create arraylist data structure to store each item in the array
-    ArrayList<Integer> list = new ArrayList<Integer>();
-    
-    //loop through for nums+1 times
-    for(int i = 1; i < nums + 1; i++){
-      
-      //add each item to the array, list
-      list.add(i);
+        //create arraylist data structure to store each item in the array
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        
+        //loop through for nums+1 times
+        for(int i = 1; i < nums + 1; i++){
+        
+        //add each item to the array, list
+        list.add(i);
+        }
+        
+        //return the arrayList, list
+        return list;
     }
-    
-    //return the arrayList, list
-    return list;
-}
+
+
+    //reverse array method 
+    public static ArrayList<Integer> reverseArray(Integer nums){
+        
+        //create arraylist, list
+        ArrayList<Integer> list = new ArrayList<Integer>();
+      
+        //loop for length of nums times, but backwards
+        for(int i = nums; i > 0; i--){
+          
+          //add each item to the list
+        	list.add(i);
+        }
+    	  
+        //print and return the list which contains the numbers in reverse order
+        return list;  
+    }
 
 }
