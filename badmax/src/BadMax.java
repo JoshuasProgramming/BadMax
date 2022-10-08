@@ -1,8 +1,12 @@
+import java.util.ArrayList;
 import java.util.Random;
 public class BadMax
 {
     // a random generator
     Random rg;
+
+    //call to badmax counter (including recursive)
+    int badmaxCalls;
     
     public int[] randomArray(int length) {
 
@@ -10,9 +14,14 @@ public class BadMax
 
         //result int array will store the integers with a fixed size of the length of the random array
         int res[] = new int[length];
-        for (int i=0; i<length;i++) {
-            res[i]=rg.nextInt(2*length)+1;
+
+        //loop for length of 'length' times. So if the user enters 5 as the size of the array, we will loop for 5 times.
+        for (int i = 0; i < length; i++) {
+
+            //Assigns a random number
+            res[i] = rg.nextInt(2 * length) + 1;
         }
+
         return res;
     }
     
@@ -26,17 +35,42 @@ public class BadMax
 
     
     public int max(int arr[]) {
-        int res=badmax(arr,arr.length-1);
+        int res = badmax(arr, arr.length - 1 );
+        System.out.println("Badmax was called: " + badmaxCalls + " times");
         return res;
     }
     
     public int badmax(int arr[], int lastpos) {
+
+        //Increment the badmax calling varible
+        badmaxCalls++;
+
+        //base case
         if (lastpos==0) return arr[0];
-        if (arr[lastpos]>badmax(arr,lastpos-1)) {
+
+        if (arr[lastpos]>badmax(arr, lastpos - 1)) {
             return arr[lastpos];
+            
         } else {
-            return badmax(arr,lastpos-1);
+            return badmax(arr, lastpos - 1);
         }
     }
     
+    //ordered array method 
+    public ArrayList<Integer> orderedArray(int nums){
+
+    //create arraylist data structure to store each item in the array
+    ArrayList<Integer> list = new ArrayList<Integer>();
+    
+    //loop through for nums+1 times
+    for(int i = 1; i < nums + 1; i++){
+      
+      //add each item to the array, list
+      list.add(i);
+    }
+    
+    //return the arrayList, list
+    return list;
+}
+
 }
