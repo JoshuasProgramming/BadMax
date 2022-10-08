@@ -7,7 +7,8 @@ public class BadMax
     public int[] randomArray(int length) {
 
         assert length>=1; // do not give me negative numbers or 0
-        
+
+        //result int array will store the integers with a fixed size of the length of the random array
         int res[] = new int[length];
         for (int i=0; i<length;i++) {
             res[i]=rg.nextInt(2*length)+1;
