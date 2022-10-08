@@ -7,7 +7,9 @@ public class Main {
 
         System.out.println(bm.max(arr));
         System.out.println(bm.orderedArray(15));
-        System.out.println(bm.reverseArray(15));
+        System.out.println(BadMax.reverseArray(15));
+
+        System.out.println(bm.modifiedBadMax(arr, 0));
 
     }
 }

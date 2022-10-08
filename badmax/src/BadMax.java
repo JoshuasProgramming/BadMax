@@ -48,12 +48,26 @@ public class BadMax
         //base case
         if (lastpos==0) return arr[0];
 
-        if (arr[lastpos]>badmax(arr, lastpos - 1)) {
+        if (arr[lastpos] > badmax(arr, lastpos - 1)) {
             return arr[lastpos];
             
         } else {
             return badmax(arr, lastpos - 1);
         }
+    }
+
+    public int modifiedBadMax(int arr[], int lastpos){
+
+        int highestNum = 0;
+
+        for(int i = 0; i < arr.length; i++){
+
+            if(arr[i] > highestNum ){
+                highestNum = arr[i];
+            }
+        }
+
+        return highestNum;
     }
     
     //ordered array method 
