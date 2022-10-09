@@ -1,8 +1,10 @@
 public class Main {
     public static void main(String[] args) {
         
+        //created BadMax object, called 'bm'
         BadMax bm = new BadMax();
 
+        //created integer array
         int arr[] = {34,54,23,44,5,6,12};
 
         System.out.println(bm.max(arr));
