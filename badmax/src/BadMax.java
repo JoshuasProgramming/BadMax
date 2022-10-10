@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 public class BadMax
 {
@@ -21,7 +22,7 @@ public class BadMax
             //Assigns a random number
             res[i] = rg.nextInt(2 * length) + 1;
         }
-
+        System.out.println("Random Array " + Arrays.toString(res));
         return res;
     }
     
